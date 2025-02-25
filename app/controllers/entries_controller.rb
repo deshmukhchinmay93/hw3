@@ -9,16 +9,12 @@ class EntriesController < ApplicationController
   end
 
   def create
-    # New Entry
     @entry = Entry.new
-
-    # Enter user data from form to Entry's columns
     @entry["title"] = params["title"]
     @entry["occurred_on"] = params["date"]
     @entry["description"] = params["description"]
     @entry["place_id"] = params["id"]
     @entry.save
-
     redirect_to "/places/#{params["id"]}"
   end
 
