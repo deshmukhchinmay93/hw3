@@ -7,9 +7,33 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
+    <style>
+      body {
+        background-color: #FFFFFF; /* White background */
+      }
+      .header-image {
+        display: block; /* Ensures the image takes up the full width */
+        text-align: left; /* Aligns the image to the left */
+        margin-bottom: 20px; /* Adds some space below the image */
+      }
+      .title {
+        color: #7A288A; /* Purple color for the title */
+        font-size: 48px; /* Increased font size */
+        font-weight: bold; /* Bold font for the title */
+      }
+      .content {
+        color: #000000; 
+      }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header-image">
+      <img src="https://www.northwestern.edu/brand/images/Kellogg_horizontal_new.jpg" alt="Kellogg Logo" style="width: 200px; height: auto;">
+    </div>
+    <h1 class="title">Travel Diary</h1>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
